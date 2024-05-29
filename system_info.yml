@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  gather_facts: true
+  name: Print system info
+  tasks:
+  - name: Display Hostname
+    debug:
+      msg: "Hostname: {{ ansible_hostname }}"
+  - name: Display OS
+    debug:
+      msg: "Operating System: {{ ansible_distribution }} {{ansible_distribution_version}}"
+  - name: Check CPU and total memory
+    debug:
+      msg: "CPU Architecture: {{ ansible_architecture }}, Total Memory: {{ ansible_memtotal_mb }} MB"
+  - name: Check Network Interface Info
+    debug:
+      msg: "IP address of ens192 is {{ ansible_facts['ens192']['ipv4']['address'] }}"
