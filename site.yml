@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.23.75
+- hosts: server
   become: true
   tasks:
   - name: Print OS info
