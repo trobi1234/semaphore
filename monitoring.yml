@@ -17,6 +17,6 @@
       debug:
         msg: 
           - "Executed On: {{ ansible_date_time.date }} {{ ansible_date_time.hour }}:{{ ansible_date_time.minute }}"
-          - "CPU Usage: {{ cpu_usage.stdout }}%"
+          - "CPU Usage: {{ cpu_usage.stdout }}, CPU Temp: {{ cpu_temp.stdout }}%"
           - "RAM Usage: {{ ram_usage.stdout }}%"
           - "Disk Space Used: {{ disk_space.stdout }}"
