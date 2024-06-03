@@ -6,4 +6,3 @@
   - name: Fan info
     shell: fans
     register: fans_informations
-    msg: "Fans Stats: {{ fans_informations.stdout }}"
