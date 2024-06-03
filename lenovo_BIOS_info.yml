@@ -1,9 +1,6 @@
 ---
-- name: Manage Lenovo server BIOS settings using Redfish API
-  hosts: all
-  roles:
-    - role: lenovo.lxca-inventory
-      lxca_url: "https://192.168.23.77"
-      lxca_user: "USERID"
-      lxca_password: "PA$$WORD987"
-      lxca_validate_certs: false
+- name: Lenovo server
+  community.general.lxca_cmms:
+    login_user: "USERID"
+    login_password: "PA$$WORD987"
+    auth_url: "https://192.168.23.77/"
