@@ -2,6 +2,7 @@
 - hosts: all
   become: true
   gather_facts: true
+  tasks:
   - name: Get CPU inventory
     community.general.redfish_info:
       category: Systems
