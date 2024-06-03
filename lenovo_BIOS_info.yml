@@ -2,11 +2,12 @@
 - name: Manage Lenovo server BIOS settings using Redfish API
   hosts: all
   tasks:
-  - name: Create session
-    community.general.redfish_command:
-      category: Sessions
-      command: CreateSession
-      baseuri: "https://192.168.23.77/"
-      username: "USERID"
-      password: "PA$$WORD987"
-    register: result
+  - name: get nodes data from LXCA
+    pylxca_module:
+      login_user: USERID
+      login_password: PA$$WORD987
+      auth_url: https://192.168.23.77
+      command_options: fans
+    register: rslt
+    tags:
+       fans
