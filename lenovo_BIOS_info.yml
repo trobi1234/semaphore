@@ -1,6 +1,8 @@
 ---
 - name: Manage Lenovo server BIOS settings using Redfish API
   hosts: all
+  become: true
+  gather_facts: true
   tasks:
   - name: Retrive BIOS settings
     community.general.redfish_info:
