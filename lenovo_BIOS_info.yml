@@ -3,9 +3,6 @@
   hosts: all
   tasks:
   - name: get nodes data from LXCA
-      login_user: USERID
-      login_password: PA$$WORD987
-      auth_url: https://192.168.23.77
       command_options: fans
     register: rslt
     tags:
