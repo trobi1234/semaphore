@@ -6,4 +6,4 @@
     register: fans_informations
     debug:
       msg: 
-      - "Fans Stats: {{ fans_informations.stdout }}%"
+        - "Fans Stats: {{ fans_informations.stdout }}%"
