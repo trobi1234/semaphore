@@ -3,15 +3,15 @@
   hosts: localhost
   tasks:
   - name: Fetch data from XClarity API
-      uri: 
-        url: "https://192.168.23.77/redfish/v1/Chassis/1/Thermal#/Fans/"
-        method: GET
-        user: "USERID"
-        password: "PA$$WORD987"
-        force_basic_auth: yes
-        headers: 
-          Content-Type: "application/json"
-        register: xclarity_response
+    uri: 
+      url: "https://192.168.23.77/redfish/v1/Chassis/1/Thermal#/Fans/"
+      method: GET
+      user: "USERID"
+      password: "PA$$WORD987"
+      force_basic_auth: yes
+      headers: 
+        Content-Type: "application/json"
+      register: xclarity_response
 
   - name: Print the response
     debug:
