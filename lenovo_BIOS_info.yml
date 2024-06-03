@@ -1,6 +1,6 @@
 ---
 - name: Retrieve data from XClarity URL
-  hosts: localhost
+  hosts: all
   tasks:
   - name: Fetch data from XClarity API
     uri: 
