@@ -4,7 +4,7 @@
   tasks:
   - name: Fetch data from XClarity API
     uri: 
-      url: "https://192.168.23.77/#"
+      url: "https://192.168.23.77"
       method: GET
       user: "USERID"
       password: "PA$$WORD987"
