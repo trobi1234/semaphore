@@ -1,7 +1,10 @@
 ---
-- hosts: localhost
-- name: Lenovo server
-  community.general.lxca_cmms:
-    login_user: "USERID"
-    login_password: "PA$$WORD987"
-    auth_url: "https://192.168.23.77/"
+- hosts: all
+  tasks:
+  - name: Fan info
+    shell: fans
+    register: fans_informations
+     - name: Fans Stats
+      debug:
+        msg: 
+          - "Fans Stats: {{ fans_informations.stdout }}%"
