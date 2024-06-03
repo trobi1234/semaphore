@@ -2,15 +2,12 @@
 - name: Manage Lenovo server BIOS settings using Redfish API
   hosts: all
   tasks:
-  - name: Retrive BIOS settings
-    community.general.redfish_info:
-      category: Systems
-      command: get
-      baseuri: "https://192.168.23.77/redfish/v1/Systems/1/Bios"
-      username: "USERID"
-      password: "PA$$WORD987"
-    register: bios_info
-    
-  - name: Print BIOS settings
-    debug:
-      var: bios_info
+  - name: get nodes data from LXCA
+    pylxca_module:
+      login_user: "USERID"
+      login_password: "PA$$WORD987"
+      auth_url: "https://192.168.23.77"
+      command_options: fans
+    register: rslt
+    tags:
+       fans
