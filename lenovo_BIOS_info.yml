@@ -1,4 +1,5 @@
 ---
+- hosts: localhost
 - name: Lenovo server
   community.general.lxca_cmms:
     login_user: "USERID"
