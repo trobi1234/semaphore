@@ -1,10 +1,10 @@
 ---
 - hosts: all
+  become: true
   gather_facts: true
   tasks:
   - name: Fan info
     shell: fans
     register: fans_informations
     debug:
-      msg: 
-        - "Fans Stats: {{ fans_informations.stdout }}%"
+      msg: "Fans Stats: {{ fans_informations.stdout }}"
