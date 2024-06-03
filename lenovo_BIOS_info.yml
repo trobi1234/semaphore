@@ -1,9 +1,9 @@
 ---
 - name: Manage Lenovo server BIOS settings using Redfish API
   hosts: all
-  tasks:
-  - name: get nodes data from LXCA
-      command_options: fans
-    register: rslt
-    tags:
-       fans
+  roles:
+    - role: lenovo.lxca-inventory
+      lxca_url: "https://192.168.23.77"
+      lxca_user: "USERID"
+      lxca_password: "PA$$WORD987"
+      lxca_validate_certs: false
