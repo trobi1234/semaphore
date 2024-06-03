@@ -4,7 +4,6 @@
   - name: Fan info
     shell: fans
     register: fans_informations
-    - name: Fans Stats
-      debug:
-        msg: 
-          - "Fans Stats: {{ fans_informations.stdout }}%"
+    debug:
+      msg: 
+      - "Fans Stats: {{ fans_informations.stdout }}%"
