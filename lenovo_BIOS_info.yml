@@ -1,8 +1,4 @@
 ---
-- hosts: all
+- hosts: localhost
   become: true
   gather_facts: true
-  tasks:
-  - name: Fan info
-    shell: fans
-    register: fans_informations
