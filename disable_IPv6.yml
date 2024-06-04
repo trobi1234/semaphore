@@ -11,16 +11,11 @@
 
   - name: Set Manager NIC
     redfish_config:
-      category: EthernetInterfaces
-      command: PATCH
-      resource_id: "NIC"
-      body: |
-        {
-          "IPv6DefaultGateway": null,
-          "IPv6StaticAddresses": [],
-          "IPv6StaticDefaultGateways": [],
-          "IPv6Addresses": []
-        }
+      category: Manager
+      command: SetManagerNic
+        nic_config:
+          DHCPv4:
+            DHCPEnabled: true
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
