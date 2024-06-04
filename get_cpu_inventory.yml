@@ -13,6 +13,9 @@
     redfish_info:
       category: Systems
       command: GetCpuInventory
+      baseuri: 
+      username: 
+      password: 
       timeout: 20
     register: result
 
