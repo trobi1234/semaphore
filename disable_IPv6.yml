@@ -16,5 +16,5 @@
       password: "{{ password }}"
       command: SetBiosAttributes
       bios_attribute_name: "Memory_2xRefreshRate"
-      bios_attribute_value: false
+      bios_attribute_value: 'Disabled'
       category: Systems
