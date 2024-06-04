@@ -14,6 +14,7 @@
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
+      command: SetBiosAttribute
       bios_attribute_name: "IPv6Enabled"
       bios_attribute_value: "false"
       category: "BIOS"
