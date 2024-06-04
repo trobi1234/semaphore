@@ -25,4 +25,5 @@
   - name: Copy results to output file
     copy:
       content: "{{ result | to_nice_json }}"
+      msg: {{ result }}
       dest: "{{ template }}.json"
