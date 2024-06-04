@@ -13,9 +13,9 @@
     redfish_config:
       category: Manager
       command: SetManagerNic
-        nic_config:
-          DHCPv4:
-            DHCPEnabled: true
+      nic_config:
+        DHCPv4:
+          DHCPEnabled: true
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
