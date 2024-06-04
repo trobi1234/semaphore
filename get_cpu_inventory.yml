@@ -13,9 +13,6 @@
     redfish_info:
       category: Systems
       command: GetCpuInventory
-      baseuri: "{{ baseuri }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
       timeout: 20
     register: result
 
