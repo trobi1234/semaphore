@@ -9,7 +9,7 @@
     run_once: true
 
   - name: Set Default host
-    set_fact: host={{baseuri}}
+    set_fact: host=https://192.168.23.77/
     when: host is undefined
 
   - name: Define file to place results
