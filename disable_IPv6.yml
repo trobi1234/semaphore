@@ -13,10 +13,8 @@
     redfish_config:
       category: Manager
       command: SetManagerNic
-      nic_config:
-        Oem:
-          Lenovo: 
-            IPv6Enabled: false
+      bios_atribute_name: IPV6Enabled
+      bios_atribute_value: false
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
