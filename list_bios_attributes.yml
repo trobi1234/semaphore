@@ -1,0 +1,14 @@
+---
+- name: BIOS attributes from Lenovo
+  hosts: all
+  geather_facts: no
+  tasks:
+  - name: Get BIOS attributes
+      uri:
+        url: "{{ baseuri }}/BIOS"
+        method: GET
+        username: "{{ username }}"
+        password: "{{ password }}"
+      register: bios_settings
+  - name: Print BIOS attributes
+    msg: "{{ bios_settings }}"
