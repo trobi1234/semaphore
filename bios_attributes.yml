@@ -13,9 +13,9 @@
     redfish_info:
       category: Systems
       command: GetBiosAttributes
-      baseuri: "192.168.23.77"
-      username: "USERID"
-      password: "PA$$WORD987"
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
       timeout: 20
     register: result
 
