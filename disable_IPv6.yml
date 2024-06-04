@@ -1,0 +1,22 @@
+---
+- hosts: all
+  connection: local
+  name: Get BIOS attributes
+  gather_facts: False
+
+  vars:
+    datatype: BiosAttributes
+
+  tasks:
+
+  - name: Set Manager NIC
+    redfish_config:
+      category: Manager
+      command: SetManagerNic
+      nic_config:
+        Oem:
+          Lenovo: 
+            IPv6Enabled: false
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
