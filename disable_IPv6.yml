@@ -12,10 +12,10 @@
   - name: Set Manager NIC
     redfish_config:
       category: Managers
-      command: SetBiosAttributes
-      bios_attributes:
-        DHCPv4:
-          DHCPEnabled: true
-      baseuri: "{{ baseuri }}"
+      baseuri: "https://{{ baseuri }}/redfish/v1/Managers/1/EthernetInterfaces/NIC"
       username: "{{ username }}"
       password: "{{ password }}"
+      validate_certs: no
+      payload:
+        Attributes:
+          IPv6Enabled: false
