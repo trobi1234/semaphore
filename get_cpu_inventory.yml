@@ -1,5 +1,5 @@
 ---
-- hosts: myhosts
+- hosts: all
   connection: local
   name: Get cpu inventory
   gather_facts: False
