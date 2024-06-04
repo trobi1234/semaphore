@@ -11,9 +11,9 @@
 
   - name: Set Manager NIC
     redfish_config:
-      category: Manager
-      command: SetManagerNic
-      nic_config:
+      category: Managers
+      command: SetBiosAttributes
+      bios_attributes:
         DHCPv4:
           DHCPEnabled: true
       baseuri: "{{ baseuri }}"
