@@ -10,12 +10,9 @@
   tasks:
 
   - name: Set Manager NIC
-    redfish_config:
-      category: Managers
-      baseuri: "https://{{ baseuri }}/redfish/v1/Managers/1/EthernetInterfaces/NIC"
+    community.general.redfish_config:
+      baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
-      validate_certs: no
-      payload:
-        Attributes:
-          IPv6Enabled: false
+      bios_attributes:
+        IPv6Enabled: false
