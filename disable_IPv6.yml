@@ -11,10 +11,16 @@
 
   - name: Set Manager NIC
     redfish_config:
-      category: Manager
-      command: SetManagerNic
-      bios_atribute_name: IPV6Enabled
-      bios_atribute_value: false
+      category: EthernetInterfaces
+      command: PATCH
+      resource_id: "NIC"
+      body: |
+        {
+          "IPv6DefaultGateway": null,
+          "IPv6StaticAddresses": [],
+          "IPv6StaticDefaultGateways": [],
+          "IPv6Addresses": []
+        }
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
