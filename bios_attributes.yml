@@ -16,7 +16,7 @@
     redfish_info:
       category: Systems
       command: GetBiosAttributes
-      baseuri: "https://192.168.23.77"
+      baseuri: "192.168.23.77"
       username: "USERID"
       password: "PA$$WORD987"
       timeout: 20
