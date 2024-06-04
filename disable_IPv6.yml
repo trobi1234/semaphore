@@ -15,6 +15,6 @@
       username: "{{ username }}"
       password: "{{ password }}"
       command: SetBiosAttributes
-      bios_attribute_name: "ipv6Enabled"
-      bios_attribute_value: "Disabled"
+      bios_attribute_name: "Memory_2xRefreshRate"
+      bios_attribute_value: "Enabled"
       category: Systems
