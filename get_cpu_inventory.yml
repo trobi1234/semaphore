@@ -1,0 +1,24 @@
+---
+- hosts: myhosts
+  connection: local
+  name: Get cpu inventory
+  gather_facts: False
+
+  vars:
+    datatype: CpuInventory
+
+  tasks:
+
+  - name: Get cpu inventory
+    redfish_info:
+      category: Systems
+      command: GetCpuInventory
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      timeout: 20
+    register: result
+
+  - name: Print result
+    debug:
+      msg: "{{ result }}"
