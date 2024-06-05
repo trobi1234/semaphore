@@ -9,7 +9,7 @@
 
   tasks:
   - name: Set Manager NIC
-    community.general.xcc_redfish_command:
+    xcc_redfish_command:
       category: Raw
       command: PatchResource
       baseuri: "{{ baseuri }}"
