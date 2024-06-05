@@ -15,7 +15,14 @@
       username: "{{ username }}"
       password: "{{ password }}"
       command: SetBiosAttributes
-      bios_attribute_name: "IPv6Enabled"
-      bios_attribute_value: 'false'
+      bios_attribute_name: "Memory_2xRefreshRate"
+      bios_attribute_value: 'Auto'
       category: Systems
 
+    - name: Reboot system to apply new BIOS settings
+      redfish_command:
+        category: Systems
+        command: PowerReboot
+        baseuri: "{{ baseuri }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
