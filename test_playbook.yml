@@ -6,15 +6,14 @@
 
   vars:
     datatype: BiosAttributes
-    secondPart: "/Managers/1/EthernetInterfaces/NIC"
 
   tasks:
   - name: Set Manager NIC
     redfish_config:
-      category: Systems
+      category: Managers
       command: SetBiosAttributes
       bios_attribute_name: "IPv6Enabled"
       bios_attribute_value: 'false'
-      baseuri: "{{ baseuri }} {{ secondPart }}"
+      baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
