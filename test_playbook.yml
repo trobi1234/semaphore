@@ -8,13 +8,12 @@
     datatype: BiosAttributes
 
   tasks:
-
-- name: Set Manager NIC
-  redfish_config:
-    category: Manager
-    command: SetManagerNic
-    bios_attribute_name: "IPv6Enabled"
-    bios_attribute_value: 'false'
-    baseuri: "{{ baseuri }}"
-    username: "{{ username }}"
-    password: "{{ password }}"
+  - name: Set Manager NIC
+    redfish_config:
+      category: Manager
+      command: SetManagerNic
+      bios_attribute_name: "IPv6Enabled"
+      bios_attribute_value: 'false'
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
