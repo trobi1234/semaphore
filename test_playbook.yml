@@ -9,11 +9,11 @@
 
   tasks:
   - name: Set Manager NIC
-    redfish_config:
-      category: Managers
-      command: SetBiosAttributes
-      bios_attribute_name: "IPv6Enabled"
-      bios_attribute_value: 'false'
+    xcc_redfish_command:
+      category: Raw
+      command: PatchResource
       baseuri: "{{ baseuri }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
+      auth_token: "{{ result.session.token }}"
+      resource_uri: "/redfish/v1/Managers/1/EthernetInterfaces/NIC"
+      request_body:
+        IPv6Enabled: "false"
