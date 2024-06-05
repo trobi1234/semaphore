@@ -10,10 +10,10 @@
   tasks:
   - name: Set Manager NIC
     redfish_config:
-      category: Manager
-      command: SetManagerNic
+      category: Systems
+      command: SetBiosAttributes
       bios_attribute_name: "IPv6Enabled"
       bios_attribute_value: 'false'
-      baseuri: "{{ baseuri }}"
+      baseuri: "{{ baseuri }}/redfish/v1/Managers/1/EthernetInterfaces/NIC"
       username: "{{ username }}"
       password: "{{ password }}"
