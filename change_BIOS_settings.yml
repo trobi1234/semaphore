@@ -19,11 +19,11 @@
       bios_attribute_value: 'Auto'
       category: Systems
 
-    - name: Reboot system to apply new BIOS settings
-      redfish_config:
-        category: Systems
-        command: PowerReboot
-        baseuri: "{{ baseuri }}"
-        username: "{{ username }}"
-        password: "{{ password }}"
-      when: bios_attribute.changed
+  - name: Reboot system to apply new BIOS settings
+    redfish_config:
+      category: Systems
+      command: PowerReboot
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    when: bios_attribute.changed
