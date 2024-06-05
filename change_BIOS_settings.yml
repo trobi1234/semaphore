@@ -16,7 +16,7 @@
       password: "{{ password }}"
       command: SetBiosAttributes
       bios_attribute_name: "Memory_2xRefreshRate"
-      bios_attribute_value: 'Auto'
+      bios_attribute_value: 'Disabled'
       category: Systems
 
   - name: Reboot system to apply new BIOS settings
