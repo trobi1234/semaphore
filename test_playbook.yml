@@ -14,6 +14,6 @@
       command: SetBiosAttributes
       bios_attribute_name: "IPv6Enabled"
       bios_attribute_value: 'false'
-      baseuri: !join["{{ baseuri }}", "/Managers/1/EthernetInterfaces/NIC"]
+      baseuri: !join ["{{ baseuri }}", "/Managers/1/EthernetInterfaces/NIC"]
       username: "{{ username }}"
       password: "{{ password }}"
