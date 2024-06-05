@@ -6,6 +6,7 @@
 
   vars:
     datatype: BiosAttributes
+    secondPart: "/Managers/1/EthernetInterfaces/NIC"
 
   tasks:
   - name: Set Manager NIC
@@ -14,6 +15,6 @@
       command: SetBiosAttributes
       bios_attribute_name: "IPv6Enabled"
       bios_attribute_value: 'false'
-      baseuri: "{{ baseuri }}" "/Managers/1/EthernetInterfaces/NIC"
+      baseuri: "{{ baseuri }} {{ secondPart }}"
       username: "{{ username }}"
       password: "{{ password }}"
