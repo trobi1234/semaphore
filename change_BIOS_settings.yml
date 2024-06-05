@@ -26,4 +26,4 @@
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
-    when: bios_attribute.changed
+    when: bios_attribute_value.changed
