@@ -9,20 +9,13 @@
 
   tasks:
 
-  - name: Set Manager NIC
+  - name: Set BIOS attribute
     redfish_config:
       baseuri: "{{ baseuri }}"
       username: "{{ username }}"
       password: "{{ password }}"
       command: SetBiosAttributes
-      bios_attribute_name: "Memory_2xRefreshRate"
-      bios_attribute_value: 'Auto'
-      category: Systems
+      bios_attribute_name: "IPv6Enabled"
+      bios_attribute_value: 'false'
+      category: Managers
 
-  - name: Reboot system to apply new BIOS settings
-    redfish_config:
-      category: Systems
-      command: GracefulRestart
-      baseuri: "{{ baseuri }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
