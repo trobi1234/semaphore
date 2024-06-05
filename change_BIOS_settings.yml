@@ -20,7 +20,7 @@
       category: Systems
 
     - name: Reboot system to apply new BIOS settings
-      redfish_command:
+      redfish_config:
         category: Systems
         command: PowerReboot
         baseuri: "{{ baseuri }}"
