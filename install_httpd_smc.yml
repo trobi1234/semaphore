@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Download httpd
+    dnf:
+      name: httpd
+      state: latest
