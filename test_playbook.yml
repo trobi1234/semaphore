@@ -9,7 +9,7 @@
 
   tasks:
   - name: Set Manager NIC
-    xcc_redfish_command:
+    remote_management.lenovoxcc.xcc_redfish_command:
       category: Raw
       command: PatchResource
       baseuri: "{{ baseuri }}"
