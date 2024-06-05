@@ -17,5 +17,5 @@
       command: SetBiosAttributes
       bios_attribute_name: "IPv6Enabled"
       bios_attribute_value: 'false'
-      category: Managers
+      category: Systems
 
